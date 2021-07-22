@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: maven:3.8.1-jdk-11
+  image: 4.8-windowsservercore-ltsc2019
   commands:
     - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
 
