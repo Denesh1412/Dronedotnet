@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: mcr.microsoft.com/dotnet/framework/samples:dotnetapp
+  image: https://hub.docker.com/mcr.microsoft.com/dotnet/framework/samples:dotnetapp
   commands:
     - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
 
