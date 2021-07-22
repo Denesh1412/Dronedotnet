@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: https://hub.docker.com/mcr.microsoft.com/dotnet/framework/samples:dotnetapp
+  image: maven:3.8.1-jdk-11
   commands:
     - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
 
