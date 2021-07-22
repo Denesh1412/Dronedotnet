@@ -2,14 +2,18 @@
 #Commit Message: Drone! Captain Canary is here! 
 
 kind: pipeline
-type: docker
+type: kubernetes
 name: default
 steps:
-
 - name: build
-  image: mcr.microsoft.com/dotnet/framework/sdk:4.8
+  image: golang:1.13
   commands:
-    - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
+    - "go build -o ./myapp"
+
+# - name: build
+#   image: mcr.microsoft.com/dotnet/framework/sdk:4.8
+#   commands:
+#     - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
 
 # - name: publish  
 #   image: plugins/docker
