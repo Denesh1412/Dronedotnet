@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: sdk:4.8
+  image: dotnet-framework-build:4.7.1-2017.12-windowsservercore-1709
   commands:
     - "dotnet sln /aspnet-get-started.sln -property:Configuration=Release"
 
