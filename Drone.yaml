@@ -5,15 +5,15 @@ kind: pipeline
 type: docker
 name: default
 steps:
-- name: build
-  image: golang:1.13
-  commands:
-    - "go build -o ./myapp"
-
 # - name: build
-#   image: mcr.microsoft.com/dotnet/framework/sdk:4.8
+#   image: golang:1.13
 #   commands:
-#     - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
+#     - "go build -o ./myapp"
+
+- name: build
+  image: mcr.microsoft.com/dotnet/framework/samples:dotnetapp
+  commands:
+    - "MSBuild.exe /aspnet-get-started.sln -property:Configuration=Release"
 
 # - name: publish  
 #   image: plugins/docker
