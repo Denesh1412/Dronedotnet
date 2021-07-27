@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: microsoft/dotnet/framework/runtime:4.8
+  image: microsoft/dotnet
   commands:
     - "dotnet sln /aspnet-get-started.sln -property:Configuration=Release"
 
