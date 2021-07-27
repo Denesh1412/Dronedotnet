@@ -11,7 +11,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: hub.docker.com/golang:1.12
+  image: hub.docker.com/golang:1.13
   commands:
     - "dotnet sln /aspnet-get-started.sln -property:Configuration=Release"
 
