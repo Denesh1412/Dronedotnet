@@ -17,7 +17,7 @@ steps:
 #     - "go build -o ./myapp"
 
 - name: build
-  image: microsoft/dotnet
+  image: mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2016
   commands:
     - "dotnet sln /aspnet-get-started.sln -property:Configuration=Release"
 
