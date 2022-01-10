@@ -19,5 +19,7 @@ connector:
       type: Token
       spec:
         tokenRef: Github
+    delegateSelectors:
+    - harnessdelegate
     executeOnDelegate: true
     type: Account
