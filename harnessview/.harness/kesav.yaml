@@ -1,0 +1,25 @@
+connector:
+  name: kesav
+  identifier: kesav
+  description:
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: Github
+  spec:
+    url: https://github.com/Denesh1412/
+    validationRepo: Dronedotnet
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Denesh1412
+          tokenRef: Github
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: Github
+    delegateSelectors:
+    - harnessdelegate
+    executeOnDelegate: true
+    type: Account
