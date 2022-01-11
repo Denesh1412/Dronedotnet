@@ -1,0 +1,12 @@
+connector:
+  name: Kubecluster
+  identifier: Kubecluster
+  description:
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: K8sCluster
+  spec:
+    credential:
+      type: InheritFromDelegate
+    delegateSelectors:
+    - harnessdelegate
