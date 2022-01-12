@@ -1,0 +1,17 @@
+connector:
+  name: Docker
+  identifier: Docker
+  description:
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://hub.docker.com/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: deneshaz@outlook.com
+        passwordRef: Dockerpass
+    delegateSelectors:
+    - harnessdelegate
