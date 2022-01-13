@@ -19,7 +19,7 @@ pipeline:
                   infrastructure:
                       type: KubernetesDirect
                       spec:
-                          connectorRef: Clusterkes
+                          connectorRef: testnew
                           namespace: default
                   execution:
                       steps:
