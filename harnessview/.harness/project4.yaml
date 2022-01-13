@@ -1,0 +1,35 @@
+pipeline:
+    name: project4
+    identifier: project4
+    projectIdentifier: Harnesspoc
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: gitnew
+                build: <+input>
+    stages:
+        - stage:
+              name: fourth
+              identifier: fourth
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: Clusterkes
+                          namespace: default
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: four
+                                identifier: four
+                                spec:
+                                    connectorRef: Docker
+                                    image: maven:latest
+                                    command: |-
+                                        ls
+                                        mvn -v
