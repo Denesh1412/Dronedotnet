@@ -30,6 +30,6 @@ pipeline:
                                 identifier: run2
                                 spec:
                                     connectorRef: Docker
-                                    image: mcr.microsoft.com/dotnet/framework/runtime
-                                    command: dir
+                                    image: maven
+                                    command: ls
                                 failureStrategies: []
