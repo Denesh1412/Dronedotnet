@@ -30,6 +30,8 @@ pipeline:
                                 identifier: run2
                                 spec:
                                     connectorRef: Docker
-                                    image: maven
-                                    command: ls
+                                    image: maven:latest
+                                    command: |-
+                                        ls
+                                        mvn -v
                                 failureStrategies: []
