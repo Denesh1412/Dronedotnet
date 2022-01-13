@@ -5,7 +5,7 @@ connector:
   projectIdentifier: Harnesspoc
   type: DockerRegistry
   spec:
-    dockerRegistryUrl: https://hub.docker.com/
+    dockerRegistryUrl: https://index.docker.io/v1/
     providerType: DockerHub
     auth:
       type: Anonymous
