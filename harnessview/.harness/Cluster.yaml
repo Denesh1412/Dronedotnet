@@ -9,11 +9,11 @@ connector:
     credential:
       type: ManualConfig
       spec:
-        masterUrl: https://myharnessc-rg-harness-1d9730-2039414b.hcp.eastus.azmk8s.io:443
+        masterUrl: https://harnesskub-harness-rg-150eca-231db87b.hcp.eastus.azmk8s.io:443
         auth:
           type: UsernamePassword
           spec:
-            username: harnessuser
-            passwordRef: Clusterkube
+            username: harnessadmin
+            passwordRef: Clusterkes
     delegateSelectors:
     - harnessdelegate
