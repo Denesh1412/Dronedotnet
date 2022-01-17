@@ -9,6 +9,7 @@ pipeline:
             codebase:
                 connectorRef: gitnew
                 build: <+input>
+                sslVerify: false
     stages:
         - stage:
               name: stagefive
@@ -33,3 +34,4 @@ pipeline:
                                     command: |-
                                         ls
                                         mvn -v
+              variables: []
