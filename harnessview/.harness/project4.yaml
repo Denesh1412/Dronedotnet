@@ -9,6 +9,7 @@ pipeline:
             codebase:
                 connectorRef: gitnew
                 build: <+input>
+                sslVerify: false
     stages:
         - stage:
               name: fourth
