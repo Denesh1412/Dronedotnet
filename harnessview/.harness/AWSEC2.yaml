@@ -1,0 +1,15 @@
+connector:
+  name: AWSEC2
+  identifier: AWSEC2
+  description:
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: Aws
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        accessKey: AKIA2JTAYBBCHGBEPT73
+        secretKeyRef: InfraEC2
+    delegateSelectors:
+    - harnessdelegate
