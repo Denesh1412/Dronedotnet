@@ -1,0 +1,38 @@
+pipeline:
+    name: project2
+    identifier: project2
+    projectIdentifier: Harnesspoc
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: Denesh1412
+                repoName: Dronedotnet
+                build: <+input>
+    stages:
+        - stage:
+              name: project2stage
+              identifier: project2stage
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: Clusterkes
+                          namespace: default
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: project2
+                                identifier: project2
+                                spec:
+                                    connectorRef: Docker
+                                    image: mcr.microsoft.com/dotnet/framework/runtime
+                                    command: dir
+                                when:
+                                    stageStatus: All
+                                failureStrategies: []
+                                description: "testing "

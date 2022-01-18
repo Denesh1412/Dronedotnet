@@ -1,0 +1,13 @@
+connector:
+  name: Docker
+  identifier: Docker
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://index.docker.io/v1/
+    providerType: DockerHub
+    auth:
+      type: Anonymous
+    delegateSelectors:
+    - harnessdelegate

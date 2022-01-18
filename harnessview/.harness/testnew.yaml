@@ -1,0 +1,20 @@
+connector:
+  name: testnew
+  identifier: testnew
+  description:
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://harnesskub-harness-rg-150eca-231db87b.hcp.eastus.azmk8s.io:443
+        auth:
+          type: ClientKeyCert
+          spec:
+            clientCertRef: clientcertificatedata
+            clientKeyRef: clientkeydata
+            clientKeyAlgo: RSA
+    delegateSelectors:
+    - harnessdelegate

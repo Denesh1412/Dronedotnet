@@ -1,0 +1,36 @@
+pipeline:
+    name: project 5
+    identifier: project_5
+    projectIdentifier: Harnesspoc
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: platform
+                build: <+input>
+                sslVerify: false
+    stages:
+        - stage:
+              name: stagefive
+              identifier: stage_five
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: Nodes
+                          namespace: default
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: five
+                                identifier: five
+                                spec:
+                                    connectorRef: Docker
+                                    image: maven:latest
+                                    command: |-
+                                        ls
+                                        mvn -v

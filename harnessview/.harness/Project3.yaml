@@ -1,0 +1,37 @@
+pipeline:
+    name: Project3
+    identifier: Project3
+    projectIdentifier: Harnesspoc
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: Denesh1412
+                repoName: Dronedotnet
+                build: <+input>
+    stages:
+        - stage:
+              name: secondstage
+              identifier: secondstage
+              type: CI
+              spec:
+                  cloneCodebase: true
+                  infrastructure:
+                      type: KubernetesDirect
+                      spec:
+                          connectorRef: testnew
+                          namespace: default
+                  execution:
+                      steps:
+                          - step:
+                                type: Run
+                                name: run2
+                                identifier: run2
+                                spec:
+                                    connectorRef: Docker
+                                    image: maven:latest
+                                    command: |-
+                                        ls
+                                        mvn -v
+                                failureStrategies: []

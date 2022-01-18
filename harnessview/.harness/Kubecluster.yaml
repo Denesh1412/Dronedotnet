@@ -1,0 +1,18 @@
+connector:
+  name: Kubecluster
+  identifier: Kubecluster
+  orgIdentifier: default
+  projectIdentifier: Harnesspoc
+  type: K8sCluster
+  spec:
+    credential:
+      type: ManualConfig
+      spec:
+        masterUrl: https://104.154.155.53/
+        auth:
+          type: UsernamePassword
+          spec:
+            username: Harnesspoc@gmail.com
+            passwordRef: GCPscrets
+    delegateSelectors:
+    - harnessdelegate
